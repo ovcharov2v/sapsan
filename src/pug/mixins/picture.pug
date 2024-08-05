@@ -1,0 +1,4 @@
+mixin picture(imgName, baseExt="jpg", alt="")
+    picture
+        source(srcset='images/'+imgName+'@1x.webp, images/'+imgName+'@2x.webp 2x', type='image/webp')
+        img(class=className, src='images/'+imgName+'@1x.'+baseExt, srcset='images/'+imgName+'@2x.'+baseExt+' 2x', alt=alt)&attributes(attributes)

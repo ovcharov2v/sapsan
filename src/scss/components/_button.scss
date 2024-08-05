@@ -1,0 +1,10 @@
+.button {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+	transition: color $transition-default, background-color $transition-default;
+
+	&:hover {
+	}
+}
