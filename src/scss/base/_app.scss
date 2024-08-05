@@ -9,12 +9,14 @@ body {
 	flex-direction: column;
 	font-family: $font-primary;
 	width: 100vw;
-	min-width: 375px;
+	min-width: 320px;
 	min-height: 100vh;
+	background-color: $color-black;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 	font-size: 18px;
 	line-height: 1.3;
+	color: $color-white;
 }
 
 .main {

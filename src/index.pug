@@ -4,7 +4,200 @@ prepend vars
 	//-
 
 append vars
-	- title = "Main page"
+	- title = "Сапсан"
+	- meta.description= "Сапсан"
 
 block content
-	h1 Sapsan
+	// Section Intro
+	section.section-intro.container
+		h1.heading.section-intro__title Создаем цифровые продукты для клиентов
+		.section-intro__grid
+			// Elem
+			figure.section-intro__elem
+				img.section-intro__elem-image(src="./images/section-intro/img1.svg", alt)
+				figcaption.section-intro__elem-content
+					+svg("icon-doc")(class="section-intro__elem-icon")
+					h3.section-intro__elem-text Формализуем цели и концепцию
+			// Elem
+			figure.section-intro__elem
+				img.section-intro__elem-image(src="./images/section-intro/img2.svg", alt)
+				figcaption.section-intro__elem-content
+					+svg("icon-figma")(class="section-intro__elem-icon")
+					h3.section-intro__elem-text Рисуем UX/UI
+			// Elem
+			figure.section-intro__elem
+				img.section-intro__elem-image(src="./images/section-intro/img3.svg", alt)
+				figcaption.section-intro__elem-content
+					+svg("icon-terminal")(class="section-intro__elem-icon")
+					h3.section-intro__elem-text Разрабатываем и запускаем
+
+	// Section Process
+	section.section-process.container
+		h2.heading.section-process__title Простой процесс на основе лучших практик
+		p.section-process__subtitle Используем гибкие методологии, но не пропускаем важные шаги
+		ul.section-process__list
+			// Elem
+			li.section-process__list-elem
+				.section-process__elem-title-box
+					+svg("icon-doc")(class="section-process__elem-icon")
+					h3.section-process__elem-title Описываем задачу
+				p.section-process__elem-text Обсуждаем какие бизнес-цели необходимо обеспечить цифровым продуктом и как именно он должен им помогать. Определяем цифровые показатели успеха после запуска продукта.
+			// Elem
+			li.section-process__list-elem
+				.section-process__elem-title-box
+					+svg("icon-figma")(class="section-process__elem-icon")
+					h3.section-process__elem-title Делаем дизайн
+				p.section-process__elem-text Подготовка CJM, UX и макетов интерфейса. Обсуждение интеграционных и технических решений, написание спецификации в виде беклога или в классическом варианте.
+			// Elem
+			li.section-process__list-elem
+				.section-process__elem-title-box
+					+svg("icon-terminal")(class="section-process__elem-icon")
+					h3.section-process__elem-title Разрабатываем
+				p.section-process__elem-text Наша команда разработчиков поэтапно создает систему, отталкиваясь от интерфейса и пользовательских сценариев и проводя демонстрации начиная со второй недели проекта.
+			// Elem
+			li.section-process__list-elem
+				.section-process__elem-title-box
+					+svg("icon-switcher")(class="section-process__elem-icon")
+					h3.section-process__elem-title Запускаем
+				p.section-process__elem-text Помогаем перевести проект в режим промышленной эксплуатации. Контролируем показатели надежности, помогаем выбрать системы для обеспечения безопасности, настраиваем и контролируем системы продуктовой аналитики
+			// Elem
+			li.section-process__list-elem
+				.section-process__elem-title-box
+					+svg("icon-chart")(class="section-process__elem-icon")
+					h3.section-process__elem-title Анализируем
+				p.section-process__elem-text Строим аналитический отчет, показывающий, как внедренная функциональность повлияла на поведение пользователей и какого экономического эффекта удалось  добиться.
+
+	// Section Clients
+	section.section-clients.container
+		h2.heading.section-clients__title Клиенты
+		.section-clients__grid
+			// Col
+			.section-clients__col
+				img.section-clients__logo(src="./images/section-clients/logo1.svg", alt)
+			// Col
+			.section-clients__col
+				img.section-clients__logo(src="./images/section-clients/logo2.svg", alt)
+			// Col
+			.section-clients__col
+				img.section-clients__logo(src="./images/section-clients/logo3.svg", alt)
+
+	// Section Technologies
+	section.section-technologies.container
+		h2.heading.section-technologies__title Используемые технологии
+		.section-technologies__grid
+			// Card
+			article.section-technologies__card
+				.section-technologies__card-icon-list
+					+svg("icon-next-js")(class="section-technologies__card-icon")
+					+svg("icon-react-js")(class="section-technologies__card-icon")
+				h3.section-technologies__card-title Nextjs / React
+				p.section-technologies__card-text для создания интерфейсной части приложений
+			// Card
+			article.section-technologies__card
+				.section-technologies__card-icon-list
+					+svg("icon-elastic-search")(class="section-technologies__card-icon")
+				h3.section-technologies__card-title Elastic search
+				p.section-technologies__card-text для организации поиска по каталогам
+			// Card
+			article.section-technologies__card
+				.section-technologies__card-icon-list
+					+svg("icon-strapi")(class="section-technologies__card-icon")
+				h3.section-technologies__card-title Strapi
+				p.section-technologies__card-text для управления контентом и  интеграции с другими системами
+			// Card
+			article.section-technologies__card
+				.section-technologies__card-icon-list
+					+svg("icon-python")(class="section-technologies__card-icon")
+				h3.section-technologies__card-title Python
+				p.section-technologies__card-text для реализации скриптов и ML
+			// Card
+			article.section-technologies__card
+				.section-technologies__card-icon-list
+					+svg("icon-yandex-cloud")(class="section-technologies__card-icon")
+				h3.section-technologies__card-title Yandex облако
+				p.section-technologies__card-text для формирования  инфрастуктуры
+			// Card
+			article.section-technologies__card
+				.section-technologies__card-icon-list
+					+svg("icon-github")(class="section-technologies__card-icon")
+					+svg("icon-vs-code")(class="section-technologies__card-icon")
+					+svg("icon-git")(class="section-technologies__card-icon")
+					+svg("icon-postgre")(class="section-technologies__card-icon")
+					+svg("icon-empty")(class="section-technologies__card-icon")
+				h3.section-technologies__card-title И многие другие
+				p.section-technologies__card-text инструменты под любую задачу
+		.section-technologies__bottom
+			a.section-technologies__link(href="#", download)
+				+svg("icon-doc-link")(class="section-technologies__link-icon")
+				|Прайслист с почасовыми ставками специалистов
+
+	// Section About
+	section.section-about.container
+		h2.heading.section-about__title Компания
+		ul.section-about__list
+			// Elem
+			li.section-about__list-elem
+				span.section-about__list-value 2015
+				span.section-about__list-text Год
+					br
+					|основания
+			// Elem
+			li.section-about__list-elem
+				span.section-about__list-value 12
+				span.section-about__list-text Клиентов начинали работать с нами
+			// Elem
+			li.section-about__list-elem
+				span.section-about__list-value 10
+				span.section-about__list-text Клиентов продложают работать с нами
+
+	// Section Start
+	section.section-start.container
+		h2.heading.section-start__title Начало работы
+		.section-start__grid
+			// Col
+			.section-start__col
+				ul.section-start__list
+					// Elem
+					li.section-start__list-elem
+						span.section-start__list-num 01
+						h3.section-start__list-title Подписание NDA
+					// Elem
+					li.section-start__list-elem
+						span.section-start__list-num 02
+						h3.section-start__list-title Техническое задание
+						p.section-start__list-text Составляем и утверждаем ТЗ и дизайн концепцию в виде макетов основных экранов в Figma
+					// Elem
+					li.section-start__list-elem
+						span.section-start__list-num 03
+						h3.section-start__list-title Оценка проекта
+						p.section-start__list-text На основании ТЗ производим оценку проекта, с фиксированной суммой и сроками.
+					// Elem
+					li.section-start__list-elem
+						span.section-start__list-num 04
+						h3.section-start__list-title Итеративный подход
+						p.section-start__list-text Через 2 недели со старта формируем и презентуем первую версию продукта и план на следующий спринт.
+					// Elem
+					li.section-start__list-elem
+						span.section-start__list-num 05
+						h3.section-start__list-title Аналитика и отчет
+						p.section-start__list-text По результатам запуска проекта собираем аналитику и предоставляем отчет, удалось ли добиться поставленных целей.
+		// Col
+		.section-start__col
+			article.section-start__offer
+				h3.section-start__offer-title
+				.section-start__offer-icons-row
+					+svg("icon-doc")(class="section-start__offer-icon")
+					+svg("icon-figma")(class="section-start__offer-icon")
+					+svg("icon-chart")(class="section-start__offer-icon")
+				a.button.section-start__offer-link(href="#") Заказать проект
+
+	// Section Callback
+	section.section-callback.container
+		h2.heading.section-callback__title Давайте начнем
+		form.section-callback__form
+			h3.section-callback__form-title Напишите нам
+			input.section-callback__form-input.input(type="text", placeholder="Имя", required)
+			input.section-callback__form-input.input(type="tel", placeholder="Телефон", required)
+			input.section-callback__form-input.input(type="email", placeholder="E-mail", required)
+			input.section-callback__form-input.input(type="text", placeholder="Пару слов о проекте", required)
+			button.button.section-callback__form-submit(type="submit", disabled) Отправить
