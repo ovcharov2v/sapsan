@@ -1,7 +1,61 @@
 .section-about {
-	&__title {}
-	&__list {}
-	&__list-elem {}
-	&__list-value {}
-	&__list-text {}
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	@include desktop {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	&__title {
+		margin-bottom: 24px;
+
+		@include desktop {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template: auto / 100%;
+		grid-gap: 24px 40px;
+
+		@include desktop {
+			grid-template: auto / repeat(3, minmax(0, 1fr));
+		}
+	}
+
+	&__list-elem {
+		display: flex;
+		align-items: flex-end;
+		gap: 16px;
+
+		@include desktop {
+			gap: 24px;
+		}
+	}
+
+	&__list-value {
+		flex-shrink: 0;
+		min-width: 104px;
+		white-space: nowrap;
+		font-size: 48px;
+		line-height: 1;
+
+		@include desktop {
+			min-width: unset;
+			font-size: 72px;
+		}
+	}
+
+	&__list-text {
+		font-size: 16px;
+		line-height: 22px;
+		color: $color-text;
+
+		@include desktop {
+			font-size: 22px;
+			line-height: 32px;
+		}
+	}
 }

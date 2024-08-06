@@ -1,15 +1,17 @@
 mixin header()
 	// Header
-	header.header.container
-		a.header__logo-link(href="#", title="Наверх")
-			img.header__logo(src="./images/logo.svg", alt="Сапсан")
-		.header__box
-			nav.header__menu
-				ul.header__menu-list
-					li.header__menu-elem
-						a.header__menu-link(href="#") Проекты
-					li.header__menu-elem
-						a.header__menu-link(href="#") Цены
-					li.header__menu-elem
-						a.header__menu-link(href="#") Контакты
-			a.button.header__callback-link(href="#") Заказать проект
+	header.header
+		.container.header__container
+			a.header__logo-link.js-scroll-link(href="#section-intro", title="Наверх")
+				img.header__logo(src="./images/logo.svg", alt="Сапсан")
+			.header__box
+				nav.header__menu
+					ul.header__menu-list
+						li.header__menu-elem
+							a.header__menu-link.js-scroll-link(href="#section-clients") Проекты
+						li.header__menu-elem
+							a.header__menu-link.js-scroll-link(href="#section-start") Цены
+						li.header__menu-elem
+							a.header__menu-link.js-scroll-link(href="#section-callback") Контакты
+				a.button.button--header.header__callback-link.js-scroll-link(href="#section-callback") Заказать проект
+				button.header__menu-btn(aria-label="Меню")

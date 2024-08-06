@@ -1,15 +1,154 @@
 .section-start {
-	&__title {}
-	&__grid {}
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	@include desktop {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	&__title {
+		margin-bottom: 24px;
+
+		@include desktop {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__grid {
+		display: grid;
+		grid-template: auto / 100%;
+		grid-gap: 40px;
+
+		@include desktop {
+			grid-template: auto / minmax(0, 2.1fr) minmax(0, 1fr);
+		}
+	}
+
 	&__col {}
+
 	&__list {}
-	&__list-elem {}
-	&__list-num {}
+
+	&__list-elem {
+		display: grid;
+		grid-template: auto / 100%;
+		grid-gap: 8px;
+		font-size: 18px;
+		line-height: 25px;
+
+		@include desktop {
+			grid-template: auto / minmax(0, 1fr) minmax(0, 1.71fr);
+			grid-gap: 40px;
+			font-size: 22px;
+			line-height: 30px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+
+			@include desktop {
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	&__list-title-box {
+		display: flex;
+		gap: 18px;
+
+		@include desktop {
+			gap: 30px;
+		}
+	}
+
+	&__list-num {
+		color: $color-text;
+	}
+
 	&__list-title {}
-	&__list-text {}
-	&__offer {}
-	&__offer-title {}
-	&__offer-icons-row {}
-	&__offer-icon {}
-	&__offer-link {}
+
+	&__list-text {
+		padding-left: 40px;
+		color: $color-text;
+
+		@include desktop {
+			padding-left: 0;
+		}
+	}
+
+	&__offer {
+		padding: 24px 16px;
+		background-color: #1E1E1E;
+		border-radius: 10px;
+
+		@include desktop {
+			padding: 32px;
+		}
+	}
+
+	&__offer-title {
+		margin-bottom: 24px;
+		font-size: 28px;
+		line-height: 38px;
+		font-weight: 500;
+
+		@include desktop {
+			margin-bottom: 64px;
+			font-size: 32px;
+			line-height: 44px;
+		}
+	}
+
+	&__offer-icons-row {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 16px;
+	}
+
+	&__offer-icon {
+		flex-shrink: 1;
+		width: 42px;
+		height: 42px;
+
+		@include desktop {
+			width: 54px;
+			height: 54px;
+		}
+	}
+
+	&__affer-separator {
+		font-size: 32px;
+		line-height: 1;
+		font-weight: 500;
+	}
+
+	&__offer-text {
+		margin-bottom: 16px;
+		font-size: 16px;
+		line-height: 22px;
+		color: $color-text;
+
+		@include desktop {
+			font-size: 18px;
+			line-height: 25px;
+		}
+	}
+
+	&__offer-cost {
+		margin-bottom: 24px;
+		font-size: 28px;
+		height: 38px;
+		font-weight: 500;
+
+		@include desktop {
+			margin-bottom: 64px;
+			font-size: 42px;
+			height: 57px;
+		}
+	}
+
+	&__offer-link {
+		width: 100%;
+	}
 }

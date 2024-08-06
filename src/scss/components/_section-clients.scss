@@ -1,6 +1,27 @@
 .section-clients {
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	@include desktop {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
 	&__title {}
-	&__grid {}
+
+	&__grid {
+		display: grid;
+		grid-template: auto / 100%;
+
+		@include tablet {
+			grid-template: auto / repeat(3, minmax(0, 1fr));
+			grid-gap: 40px;
+		}
+	}
+
 	&__col {}
-	&__logo {}
+
+	&__logo {
+		width: 100%;
+	}
 }

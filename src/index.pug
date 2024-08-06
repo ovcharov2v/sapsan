@@ -9,7 +9,7 @@ append vars
 
 block content
 	// Section Intro
-	section.section-intro.container
+	section#section-intro.section-intro.container
 		h1.heading.section-intro__title Создаем цифровые продукты для клиентов
 		.section-intro__grid
 			// Elem
@@ -32,7 +32,7 @@ block content
 					h3.section-intro__elem-text Разрабатываем и запускаем
 
 	// Section Process
-	section.section-process.container
+	section#section-process.section-process.container
 		h2.heading.section-process__title Простой процесс на основе лучших практик
 		p.section-process__subtitle Используем гибкие методологии, но не пропускаем важные шаги
 		ul.section-process__list
@@ -68,7 +68,7 @@ block content
 				p.section-process__elem-text Строим аналитический отчет, показывающий, как внедренная функциональность повлияла на поведение пользователей и какого экономического эффекта удалось  добиться.
 
 	// Section Clients
-	section.section-clients.container
+	section#section-clients.section-clients.container
 		h2.heading.section-clients__title Клиенты
 		.section-clients__grid
 			// Col
@@ -82,7 +82,7 @@ block content
 				img.section-clients__logo(src="./images/section-clients/logo3.svg", alt)
 
 	// Section Technologies
-	section.section-technologies.container
+	section#section-technologies.section-technologies.container
 		h2.heading.section-technologies__title Используемые технологии
 		.section-technologies__grid
 			// Card
@@ -123,7 +123,7 @@ block content
 					+svg("icon-vs-code")(class="section-technologies__card-icon")
 					+svg("icon-git")(class="section-technologies__card-icon")
 					+svg("icon-postgre")(class="section-technologies__card-icon")
-					+svg("icon-empty")(class="section-technologies__card-icon")
+					+svg("icon-etc")(class="section-technologies__card-icon section-technologies__card-icon--etc")
 				h3.section-technologies__card-title И многие другие
 				p.section-technologies__card-text инструменты под любую задачу
 		.section-technologies__bottom
@@ -132,7 +132,7 @@ block content
 				|Прайслист с почасовыми ставками специалистов
 
 	// Section About
-	section.section-about.container
+	section#section-about.section-about.container
 		h2.heading.section-about__title Компания
 		ul.section-about__list
 			// Elem
@@ -151,7 +151,7 @@ block content
 				span.section-about__list-text Клиентов продложают работать с нами
 
 	// Section Start
-	section.section-start.container
+	section#section-start.section-start.container
 		h2.heading.section-start__title Начало работы
 		.section-start__grid
 			// Col
@@ -159,40 +159,49 @@ block content
 				ul.section-start__list
 					// Elem
 					li.section-start__list-elem
-						span.section-start__list-num 01
-						h3.section-start__list-title Подписание NDA
+						.section-start__list-title-box
+							span.section-start__list-num 01
+							p.section-start__list-title Подписание NDA
 					// Elem
 					li.section-start__list-elem
-						span.section-start__list-num 02
-						h3.section-start__list-title Техническое задание
+						.section-start__list-title-box
+							span.section-start__list-num 02
+							p.section-start__list-title Техническое задание
 						p.section-start__list-text Составляем и утверждаем ТЗ и дизайн концепцию в виде макетов основных экранов в Figma
 					// Elem
 					li.section-start__list-elem
-						span.section-start__list-num 03
-						h3.section-start__list-title Оценка проекта
+						.section-start__list-title-box
+							span.section-start__list-num 03
+							p.section-start__list-title Оценка проекта
 						p.section-start__list-text На основании ТЗ производим оценку проекта, с фиксированной суммой и сроками.
 					// Elem
 					li.section-start__list-elem
-						span.section-start__list-num 04
-						h3.section-start__list-title Итеративный подход
+						.section-start__list-title-box
+							span.section-start__list-num 04
+							p.section-start__list-title Итеративный подход
 						p.section-start__list-text Через 2 недели со старта формируем и презентуем первую версию продукта и план на следующий спринт.
 					// Elem
 					li.section-start__list-elem
-						span.section-start__list-num 05
-						h3.section-start__list-title Аналитика и отчет
+						.section-start__list-title-box
+							span.section-start__list-num 05
+							p.section-start__list-title Аналитика и отчет
 						p.section-start__list-text По результатам запуска проекта собираем аналитику и предоставляем отчет, удалось ли добиться поставленных целей.
-		// Col
-		.section-start__col
-			article.section-start__offer
-				h3.section-start__offer-title
-				.section-start__offer-icons-row
-					+svg("icon-doc")(class="section-start__offer-icon")
-					+svg("icon-figma")(class="section-start__offer-icon")
-					+svg("icon-chart")(class="section-start__offer-icon")
-				a.button.section-start__offer-link(href="#") Заказать проект
+			// Col
+			.section-start__col
+				article.section-start__offer
+					h3.section-start__offer-title Получить оценку стоимости проекта
+					.section-start__offer-icons-row
+						+svg("icon-doc")(class="section-start__offer-icon")
+						span.section-start__offer-separator +
+						+svg("icon-figma")(class="section-start__offer-icon")
+						span.section-start__offer-separator +
+						+svg("icon-chart")(class="section-start__offer-icon")
+					p.section-start__offer-text ТЗ, дизайн, аналитика всего за
+					p.section-start__offer-cost 1 000 ₽
+					a.button.section-start__offer-link.js-scroll-link(href="#section-callback") Заказать проект
 
 	// Section Callback
-	section.section-callback.container
+	section#section-callback.section-callback.container
 		h2.heading.section-callback__title Давайте начнем
 		form.section-callback__form
 			h3.section-callback__form-title Напишите нам

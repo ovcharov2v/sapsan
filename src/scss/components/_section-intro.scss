@@ -1,9 +1,73 @@
 .section-intro {
-	&__title {}
-	&__grid {}
-	&__elem {}
-	&__elem-image {}
-	&__elem-content {}
-	&__elem-icon {}
-	&__elem-text {}
+	padding-top: 70px;
+	padding-bottom: 20px;
+
+	@include desktop {
+		padding-top: 120px;
+		padding-bottom: 40px;
+	}
+
+	&__title {
+		margin-bottom: 24px;
+
+		@include desktop {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__grid {
+		display: grid;
+		grid-template: auto / 100%;
+		grid-gap: 24px 40px;
+
+		@include tablet {
+			grid-template: auto / repeat(3, minmax(0, 1fr));
+		}
+	}
+
+	&__elem {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	&__elem-image {
+		display: block;
+		max-width: 100%;
+		margin-left: 48px;
+
+		@include desktop {
+			margin-left: 0;
+		}
+	}
+
+	&__elem-content {
+		display: flex;
+		gap: 16px;
+		align-items: center;
+		margin-bottom: 24px;
+
+		@include desktop {
+		margin-bottom: 32px;}
+	}
+
+	&__elem-icon {
+		flex-shrink: 0;
+		width: 42px;
+		height: 42px;
+
+		@include desktop {
+			width: 54px;
+			height: 54px;
+		}
+	}
+
+	&__elem-text {
+		font-size: 18px;
+		line-height: 25px;
+
+		@include desktop {
+			font-size: 22px;
+			line-height: 30px;
+		}
+	}
 }

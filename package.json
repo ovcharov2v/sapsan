@@ -69,7 +69,9 @@
 		"@babel/runtime": "7.14.8",
 		"browser-sync": "2.29.3",
 		"core-js": "3.15.2",
-		"reset-css": "5.0.2"
+		"imask": "6.0.5",
+		"reset-css": "5.0.2",
+		"smoothscroll-polyfill": "0.4.4"
 	},
 	"lint-staged": {
 		"*.(js|jsx|ts|tsx)": "eslint --color --fix",

@@ -1,10 +1,142 @@
 .header {
-	&__logo-link {}
-	&__logo {}
-	&__box {}
-	&__menu {}
-	&__menu-list {}
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: rgba($color-black, .85);
+	backdrop-filter: blur(10px);
+
+	@include desktop {
+		padding-top: 18px;
+		padding-bottom: 18px;
+	}
+
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo-link {
+		display: inline-block;
+	}
+
+	&__logo {
+		display: block;
+		width: 100%;
+		pointer-events: none;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 6px;
+
+		@include desktop {
+			gap: 62px;
+		}
+	}
+
+	&__menu {
+		position: fixed;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		padding: 120px 10px 30px;
+		background-color: $color-black;
+		transform: translateX(-100%);
+		transition: transform $transition-default;
+
+		@include desktop {
+			position: static;
+			z-index: 0;
+			width: auto;
+			height: auto;
+			transform: none;
+			padding: 0;
+			background-color: unset;
+		}
+
+		.header--menu-shown & {
+			transform: none;
+		}
+	}
+
+	&__menu-list {
+		display: flex;
+		flex-direction: column;
+
+		@include desktop {
+			flex-direction: row;
+			align-items: center;
+			gap: 62px;
+		}
+	}
+
 	&__menu-elem {}
-	&__menu-link {}
+
+	&__menu-link {
+		display: inline-block;
+		padding: 16px 0;
+		transition: color $transition-default;
+
+		&:hover {
+			color: $color-red;
+		}
+	}
+
 	&__callback-link {}
+
+	&__menu-btn {
+		flex-shrink: 0;
+		position: relative;
+		display: block;
+		width: 48px;
+		height: 48px;
+		margin-right: -12px;
+		border: none;
+		background-color: transparent;
+
+		&::before,
+		&::after {
+			display: block;
+			position: absolute;
+			left: 12px;
+			width: 22px;
+			height: 2px;
+			transform-origin: 7px 1px;
+			background-color: $color-white;
+			content: "";
+			transition: transform $transition-default;
+		}
+
+		&::before {
+			top: 20px;
+		}
+
+		&::after {
+			bottom: 20px;
+		}
+
+		@include desktop {
+			display: none;
+		}
+
+		.header--menu-shown & {
+			&::before {
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
 }

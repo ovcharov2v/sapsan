@@ -1,5 +1,43 @@
 .footer {
-	&__name {}
-	&__bottom {}
-	&__text {}
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	@include desktop {
+		padding-bottom: 80px;
+	}
+
+	&__name {
+		margin-bottom: 8px;
+		font-size: 22px;
+		line-height: 30px;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		@include desktop {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		@include desktop {
+			flex-direction: row;
+			align-items: flex-end;
+			justify-content: space-between;
+		}
+	}
+
+	&__text {
+		font-size: 12px;
+		line-height: 16px;
+		color: $color-text;
+
+		@include desktop {
+			font-size: 14px;
+			line-height: 19px;
+		}
+	}
 }
